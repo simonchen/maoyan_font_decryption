@@ -13,7 +13,7 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 It is the major module to decrypt the numbers encrypted in Font. 
 In general, you might just use the two functions to decrypt the numbers :
 ```
-## decryptHtmlNumbers
+** decryptHtmlNumbers **
 Parameter -'s' is the original HTML entity text that looks like 
 &#xF09F;&#xE690;&#xEA64;&#xF031;&#xE238;.&#xF031;
 Note, the 'dot' char is allowed.
