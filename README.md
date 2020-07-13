@@ -12,7 +12,7 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 # Major module - [font_decrypt.py](font_decrypt.py)
 It is the major module to decrypt the numbers encrypted in Font. 
 In general, you might just use the two functions to decrypt the numbers :
-## decryptHtmlNumbers
+### decryptHtmlNumbers
 **Parameter -'s'** is the original HTML entity text that looks like 
 &amp;#xF09F;&amp;#xE690;&amp;#xEA64;&amp;#xF031;&amp;#xE238;&amp#xF031;
 &amp;#xE238;.&amp#xF031;
@@ -21,7 +21,7 @@ In general, you might just use the two functions to decrypt the numbers :
 otherwise, it's a local font file path.
 **Returns** the actual numbers displaying on HTML page.
 
-## decryptRawNumbers
+### decryptRawNumbers
 It's same usage as decryptHtmlNumbers, except for the parameter - 's' should be raw unicode text
 
 # Principle
