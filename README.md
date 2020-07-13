@@ -15,7 +15,7 @@ In general, you might just use the two functions to decrypt the numbers :
 ## decryptHtmlNumbers
 Parameter -'s' is the original HTML entity text that looks like 
 &amp;#xF09F;&amp;#xE690;&amp;#xEA64;&amp;#xF031;&amp;#xE238;&amp#xF031;
-#xE238;.&amp#xF031;
+&amp;#xE238;.&amp#xF031;
 **Note**, the 'dot' char is allowed.
 Parameter - 'font' can be either url or local font file path, it does recognize the difference if 'http://' or 'https://' is leading of the parameter.
 
