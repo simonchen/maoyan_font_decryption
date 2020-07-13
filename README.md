@@ -1,4 +1,4 @@
-# Font Encryption / Decryption
+# Background
 The way could be extended for any site who uses same Font Encryption Technique.
 
 Recently, the font encryption technique is quite popularity on many Chinese sites for prevent data scraping, those senstive data such as the digits(0~9) are encoded
@@ -33,7 +33,7 @@ python font_decrypt.py -d "&amp;#xe256;&amp;#xec6f;&amp;#xe36a;&amp;#xeb21;&amp;
 # Dependency
 [fontTools lib](https://github.com/fonttools/fonttools) is required.
 
-# Background principle
+# Principle (Font Encryption / Decryption)
 As mentioned before, the encrypted numbers can be seen in HTML source:
 ```
 <span class="index-left info-num one-line"><span class="stonefont">&#xea90;&#xe607;&#xe94e;&#xea90;&#xf351;</span></span>
