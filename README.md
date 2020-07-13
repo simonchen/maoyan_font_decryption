@@ -9,7 +9,7 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 <span class="index-left info-num one-line"><span class="stonefont">&#xea90;&#xe607;&#xe94e;&#xea90;&#xf351;</span></span>
 ```
 
-# Major module - ![font_decrypt.py](font_decrypt.py)
+# Major module - [font_decrypt.py](font_decrypt.py)
 It is the major module to decrypt the numbers encrypted in Font. 
 In general, you might just use the two functions to decrypt the numbers :
 ## decryptHtmlNumbers
