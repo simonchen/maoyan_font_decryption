@@ -1,5 +1,6 @@
 # maoyan_font_decryption
-Comprehensive font decryption schema written in python
+The numeric decryption solution for maoyan.com written in python, it could be used for general sites who uses same encryption technique.
+
 Recently, the font encryption technique is quite popularity used for Chinese sites, for prevent data scraping, the senstive data such as the numbers is encoded
 using a special method - Font encryption, below is an example on maoyan.com (a popular movie site in Chinese)
 ![Maoyan.com - Font encryption](maoyan_font_screenshot.png)
