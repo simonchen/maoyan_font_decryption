@@ -13,19 +13,20 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 # Major module - [font_decrypt.py](font_decrypt.py)
 - Python 2.7
 - Python 3.x
+
 It is the major module to decrypt the numbers encrypted in Font. 
 In general, you might just exploit the below two methods to decrypt the numbers :
 ### decryptHtmlNumbers -d
-**html numbers** is the original HTML entity text that looks like 
+**s** is the original HTML entity text that looks like 
 &amp;#xF09F;&amp;#xE690;&amp;#xEA64;&amp;#xF031;&amp;#xE238;&amp#xF031;
 &amp;#xE238;.&amp#xF031;
-**Note**, the 'dot' char is allowed with **html numbers**
-**font_url|font_filepath** can be either url or local font file path, when 'http://' or 'https://' is leading of this parameter, it's treated as font url ,
+**Note**, **s** only allows the encoded HTML entity or dot.
+**font** can be either url or local font file path, when 'http://' or 'https://' is leading of this parameter, it's treated as font url ,
 otherwise, it's a local font file path.
 **Returns** the actual numbers displaying on HTML page.
 
 ### decryptRawNumbers -d 
-It's same usage as decryptHtmlNumbers, except for the parameter - 's' should be raw unicode text
+It's same usage as decryptHtmlNumbers, except for the parameter **s** should be raw unicode text
 
 ### Example commands to implement "decryptHtmlNumbers"
 python font_decrypt.py -d "&amp;#xe256;&amp;#xec6f;&amp;#xe36a;&amp;#xeb21;&amp;#xeb21;" "http://vfile.meituan.net/colorstone/99723393b6b3b11a46b8c30e711ae0032280.woff"
