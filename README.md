@@ -30,6 +30,9 @@ It's same usage as decryptHtmlNumbers, except for the parameter - 's' should be 
 ### Example commands to implement "decryptHtmlNumbers"
 python font_decrypt.py -d "&amp;#xe256;&amp;#xec6f;&amp;#xe36a;&amp;#xeb21;&amp;#xeb21;" "http://vfile.meituan.net/colorstone/99723393b6b3b11a46b8c30e711ae0032280.woff"
 
+# Dependency
+[fontTools lib](https://github.com/fonttools/fonttools) is required.
+
 # Background principle
 As mentioned before, the encrypted numbers can be seen in HTML source:
 ```
@@ -70,7 +73,7 @@ you will have to manually look on the glyph contours to finialize the new mappin
 The codes has ability to make a AI training to find the new mapping automatically by comparing an existing mapping as we finalized.
 
 ## AI Training for comparing the similarity between glyphs
-The key point is to find a method scoring the similary of the glyph aganist to existing mapping,
+The key point is to find a method scoring the similary of the glyph aganist to existing mapping.
 See below code line:
 ```
 score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*10))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
@@ -80,6 +83,11 @@ There are three key factors affecting the similarity detection:
 1. The variance based on all contour points comparison - getVar(pt_divs) , pt_divs is the list of ratio between the featurizes of tow points, lowest variance means higher similarity.
 2. Number of same points - same_pt_cnt , more same points means higher similarity.
 3. The difference of how many points between two glyphs, lower similarity is on higher difference.
+
+  - ### Reliability
+  the AI Training doesn't guarantee that result is 100% correctly decrypted, if you find any issue, let me know please. probabaly, that need a lot of samples and make the improvement in near future.
+  - ### Use existing AI libs
+  Such as Sklearn, Numpy, Scipy, Pandas etc. they also provide methods in consine / variance comparison for learning the similary, if think that the current way to compare the similarity is not much good, then you can consider using these libs for AI training.
 
 ## Quick test
 [font_decrypt.py](font_decrypt.py) contains a fixed list of fonts for testing, it does convert the encrypted HTML numbers to the actual numbers.
