@@ -1,5 +1,5 @@
 # Font Encryption / Decryption
-the way could be extended for any site who uses same Font Encryption Technique.
+The way could be extended for any site who uses same Font Encryption Technique.
 
 Recently, the font encryption technique is quite popularity on many Chinese sites for prevent data scraping, those senstive data such as the digits(0~9) are encoded
 using a special method - Font encryption, below is an typical example on maoyan.com (a popular movie site in Chinese)
@@ -11,6 +11,8 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 ```
 
 # Major module - [font_decrypt.py](font_decrypt.py)
+- Python 2.7
+- Python 3.x
 It is the major module to decrypt the numbers encrypted in Font. 
 In general, you might just exploit the below two methods to decrypt the numbers :
 ### decryptHtmlNumbers -d
@@ -91,4 +93,5 @@ Note: every time you run the command with same page url, it will load different 
 python font_decrypt.py -test_maoyan "https://maoyan.com/films/1226583"
 ```
 
-End.
+## Warning
+You can use the codes for free for personal purpose only, you will be responsible for any legal suit in commercial usage.
