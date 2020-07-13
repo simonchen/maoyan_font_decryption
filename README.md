@@ -89,7 +89,7 @@ There are three key factors affecting the similarity detection:
   - ### Use existing AI libs
   Such as Sklearn, Numpy, Scipy, Pandas etc. they also provide methods in consine / variance comparison for learning the similary, if think that the current way to compare the similarity is not much good, then you can consider using these libs for AI training.
 
-## Quick test
+# Quick test
 [font_decrypt.py](font_decrypt.py) contains a fixed list of fonts for testing, it does convert the encrypted HTML numbers to the actual numbers.
 ```
 python font_decrypt.py -test
@@ -101,5 +101,5 @@ Note: every time you run the command with same page url, it will load different 
 python font_decrypt.py -test_maoyan "https://maoyan.com/films/1226583"
 ```
 
-## Warning
+# Warning
 You can use the codes for free for personal purpose only, you will be responsible for any legal suit in commercial usage.
