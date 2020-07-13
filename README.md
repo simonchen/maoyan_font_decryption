@@ -85,8 +85,9 @@ There are three key factors affecting the similarity detection:
 2. Number of same points - same_pt_cnt , more same points means higher similarity.
 3. The difference of how many points between two glyphs, lower similarity is on higher difference.
 
-  - ### Reliability
-  the AI Training doesn't guarantee that result is 100% correctly decrypted, if you find any issue, let me know please. probabaly, that need a lot of samples and make the improvement in near future.
+  - Accuracy & Sample training
+  Currently, there is only one font sample(i.e, the font file .woff in Repo.) that we knew its character mapping hereby for AI training, you might join more than one font samples for AI training for increase the accuracy.
+  
   - ### Use existing AI libs
   Such as Sklearn, Numpy, Scipy, Pandas etc. they also provide methods in consine / variance comparison for learning the similary, if think that the current way to compare the similarity is not much good, then you can consider using these libs for AI training.
 
