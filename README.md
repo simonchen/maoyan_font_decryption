@@ -28,7 +28,7 @@ otherwise, it's a local font file path.
 It's same usage as decryptHtmlNumbers, except for the parameter - 's' should be raw unicode text
 
 ### Example commands to implement "decryptHtmlNumbers"
-python font_decrypt.py -d "&#xe256;&#xec6f;&#xe36a;&#xeb21;&#xeb21;" "http://vfile.meituan.net/colorstone/99723393b6b3b11a46b8c30e711ae0032280.woff"
+python font_decrypt.py -d "&amp;#xe256;&amp;#xec6f;&amp;#xe36a;&amp;#xeb21;&amp;#xeb21;" "http://vfile.meituan.net/colorstone/99723393b6b3b11a46b8c30e711ae0032280.woff"
 
 # Background principle
 As mentioned before, the encrypted numbers can be seen in HTML source:
@@ -79,7 +79,7 @@ There are three key factors affecting the similarity detection:
 
 1. The variance based on all contour points comparison - getVar(pt_divs) , pt_divs is the list of ratio between the featurizes of tow points, lowest variance means higher similarity.
 2. Number of same points - same_pt_cnt , more same points means higher similarity.
-3. The difference of how many points between two glyphs, the difference is more that means lower similarity.
+3. The difference of how many points between two glyphs, lower similarity is on higher difference.
 
 ## Quick test
 [font_decrypt.py](font_decrypt.py) contains a fixed list of fonts for testing, it does convert the encrypted HTML numbers to the actual numbers.
