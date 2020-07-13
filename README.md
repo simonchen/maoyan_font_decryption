@@ -55,3 +55,27 @@ Font file has defined the character mapping table which specific character code(
 we can easily figure out the mapping table by the tool [Font Creator](https://www.high-logic.com/font-editor/fontcreator)
 
 ![Font creator - extracting the cmap table](font_creator.png)
+
+Code points - $F6FA is corresponding to that glyph as displaying number '2' 
+$F6FA is the exactly matching the Hex HTML char - &amp;#xF6FA
+You might guess that you should use the mapping table to get the actual number '2', 
+well, if the numbers always is encrypted using same one font file, that should be fine.
+But if the font is variable to be loaded dyanmically, in other words, the character mapping table will be changed,
+you will have to manually look on the glyph contours to finialize the new mapping, 
+The codes has ability to make a AI training to find the new mapping automatically by comparing an existing mapping as we finalized.
+
+## AI Training for comparison
+The key point is to find a method scoring the similary of the glyph aganist to existing mapping,
+See below code line:
+```
+score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*10))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
+```
+There are three key factors affecting the similary detection:
+
+1. The variance in list of points - getVar(pt_divs)
+2. Number of same points - same_pt_cnt
+3. The difference of how many points between two glyphs
+
+
+
+2. 
