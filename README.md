@@ -73,7 +73,7 @@ See below code line:
 ```
 score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*10))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
 ```
-There are three key factors affecting the similary detection:
+There are three key factors affecting the similarity detection:
 
 1. The variance based on all contour points comparison - getVar(pt_divs) , pt_divs is the list of ratio between the featurizes of tow points, lowest variance means higher similarity.
 2. Number of same points - same_pt_cnt , more same points means higher similarity.
