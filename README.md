@@ -12,7 +12,7 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 
 # Major module - [font_decrypt.py](font_decrypt.py)
 It is the major module to decrypt the numbers encrypted in Font. 
-In general, you might just use the two functions to decrypt the numbers :
+In general, you might just exploit the below two methods to decrypt the numbers :
 ### decryptHtmlNumbers
 **Parameter -'s'** is the original HTML entity text that looks like 
 &amp;#xF09F;&amp;#xE690;&amp;#xEA64;&amp;#xF031;&amp;#xE238;&amp#xF031;
@@ -25,4 +25,33 @@ otherwise, it's a local font file path.
 ### decryptRawNumbers
 It's same usage as decryptHtmlNumbers, except for the parameter - 's' should be raw unicode text
 
-# Principle
+# Background principle
+As mentioned before, the encrypted numbers can be seen in HTML source:
+```
+<span class="index-left info-num one-line"><span class="stonefont">&#xea90;&#xe607;&#xe94e;&#xea90;&#xf351;</span></span>
+```
+Figuring out that the displaying text is rely on font-family: stonefont
+```
+.stonefont {
+    font-family: stonefont;
+}
+```
+And the actual font file in here:
+```
+  <style>
+    @font-face {
+      font-family: stonefont;
+      src: url('//vfile.meituan.net/colorstone/ceac9a4fb813b00f2c681b4dae3c4c773456.eot');
+      src: url('//vfile.meituan.net/colorstone/ceac9a4fb813b00f2c681b4dae3c4c773456.eot?#iefix') format('embedded-opentype'),
+           url('//vfile.meituan.net/colorstone/259b2a69d2fedfed719b8dcfe9c3a0022284.woff') format('woff');
+    }
+
+    .stonefont {
+      font-family: stonefont;
+    }
+  </style>
+```
+Font file has defined the character mapping table which specific character code(in unicode) corresponds to certain glyph contours,
+we can easily figure out the mapping table by the tool [Font Creator](https://www.high-logic.com/font-editor/fontcreator)
+
+![Font creator - extracting the cmap table](font_creator.png)
