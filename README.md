@@ -85,7 +85,8 @@ There are three key factors affecting the similary detection:
 python font_decrypt.py -test
 ```
 
-Yet you can pass the page url(maoyan.com) where to load the special font and HTML numbers, then it will extract the actual numbers.
+Yet you can pass the page url(maoyan.com) where to load the special font and HTML numbers, this will extract the actual numbers.
+Note: every time you run the command with same page url, it will load different fonts as randomly, in case you should continously check the returned result to see if the AI training does the decryption accurately !
 ```
 python font_decrypt.py -test_maoyan "https://maoyan.com/films/1226583"
 ```
