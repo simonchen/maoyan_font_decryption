@@ -78,7 +78,7 @@ The codes has ability to make a AI training to find the new mapping automaticall
 The key point is to find a method scoring the similary of the glyph aganist to existing mapping.
 See below code line:
 ```
-score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*10))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
+score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*(0.25*std_pt_num)))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
 ```
 There are three key factors affecting the similarity detection:
 
