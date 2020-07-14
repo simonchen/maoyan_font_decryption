@@ -82,7 +82,7 @@ score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*(0.25*std_pt_nu
 ```
 There are three key factors affecting the similarity detection:
 
-1. The variance based on all contour points comparison ```getVar(pt_divs)``` , **pt_divs** is the list of ratio between the featurizes of tow points, lowest variance means higher similarity.
+1. The variance based on all contour points comparison ```getVar(pt_divs)``` , **pt_divs** is the list of ratio between the featurizes of two points, lowest variance means higher similarity.
 2. Number of same points **same_pt_cnt** , if the same points(x,y) are counted more that means higher similarity.
 3. The difference of the contours(i.e, how many points) between two glyphs (```abs(std_pt_num-comp_pt_num```), lower similarity is on higher difference.
 
