@@ -11,13 +11,13 @@ Obviously, the numbers from HTML Source is encoded as HTML entities (unicode tex
 <span class="index-left info-num one-line"><span class="stonefont">&#xea90;&#xe607;&#xe94e;&#xea90;&#xf351;</span></span>
 ```
 
-# Decryption - [font_decrypt.py](font_decrypt.py)
+# Decryption functions in [font_decrypt.py](font_decrypt.py)
 - Python 2.7
 - Python 3.x
 
 It is the major module to decrypt the numbers encrypted in Font. 
 In general, you might just exploit the below two methods to decrypt the numbers :
-### decryptHtmlNumbers -d
+### decryptHtmlNumbers 
 **s** is the original HTML entity text that looks like 
 &amp;#xF09F;&amp;#xE690;&amp;#xEA64;&amp;#xF031;&amp;#xE238;&amp#xF031;
 &amp;#xE238;.&amp#xF031;
@@ -26,10 +26,10 @@ In general, you might just exploit the below two methods to decrypt the numbers 
 otherwise, it's a local font file path.
 **Returns** the actual numbers displaying on HTML page.
 
-### decryptRawNumbers -d 
+### decryptRawNumbers  
 It's same usage as decryptHtmlNumbers, except for the parameter **s** should be raw unicode text
 
-### Example commands to implement "decryptHtmlNumbers"
+### Example commands to implement the function "decryptHtmlNumbers"
 python font_decrypt.py -d "&amp;#xe256;&amp;#xec6f;&amp;#xe36a;&amp;#xeb21;&amp;#xeb21;" "http://vfile.meituan.net/colorstone/99723393b6b3b11a46b8c30e711ae0032280.woff"
 
 # Dependency
