@@ -1,5 +1,5 @@
 # Background
-The python module could be extended for any site who uses same Font Encryption Technique.
+The python module could be extended for any site who uses same **Font Encryption Technique**.
 
 Recently, the font encryption technique is quite popularity on many Chinese sites for prevent data scraping, those senstive data such as the digits(0~9) are encoded
 using a special method - Font encryption, below is an typical example on maoyan.com (a popular movie site in Chinese)
