@@ -109,6 +109,8 @@ python font_decrypt.py -test_maoyan "https://maoyan.com/films/1226583"
    http://blog.christianperone.com/2013/09/machine-learning-cosine-similarity-for-vector-space-models-part-iii/
  - **字体加密破解技术分享-01**
    https://zhuanlan.zhihu.com/p/108207403
+   **Python爬虫：猫眼电影反爬—动态字体处理（2020）**
+   https://blog.csdn.net/qq_43153418/article/details/104043760?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
 
 # Warning
 You can use the codes for free for personal purpose only, you will be responsible for any legal suit in commercial usage.
