@@ -143,7 +143,10 @@ def getStreamMap(raw_font_stream):
             gen_matches.append((comp_uni, score))
         if len(curves_matches) == 0:
             curves_matches = gen_matches
-        curves_matches.sort(lambda m1, m2: 1 if m1[1] > m2[1] else -1)
+        try:
+            curves_matches.sort(lambda m1, m2: 1 if m1[1] > m2[1] else -1)
+        except:
+            curves_matches.sort(key=lambda k: k[1], reverse=False)
         if len(curves_matches) > 0:
             #print std_num, curves_matches
             cmap[curves_matches[0][0]] = std_num
@@ -273,8 +276,8 @@ if __name__ == '__main__':
             if len(sys.argv) > 2:
                 for i in range(0, eval(sys.argv[3])):
                     test_maoyan(url=sys.argv[2])
-                else:
-                    test_maoyan(url=sys.argv[2])
+            else:
+                test_maoyan(url=sys.argv[2])
         if sys.argv[1] == '-d':
             ret = decryptHtmlNumbers(sys.argv[2], sys.argv[3])
             print ret
