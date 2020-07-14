@@ -270,7 +270,11 @@ if __name__ == '__main__':
             except:
                 print traceback.print_exc()
         if sys.argv[1] == '-test_maoyan':
-            test_maoyan(url=sys.argv[2])
+            if len(sys.argv) > 2:
+                for i in range(0, eval(sys.argv[3])):
+                    test_maoyan(url=sys.argv[2])
+                else:
+                    test_maoyan(url=sys.argv[2])
         if sys.argv[1] == '-d':
             ret = decryptHtmlNumbers(sys.argv[2], sys.argv[3])
             print ret
