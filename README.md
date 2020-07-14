@@ -103,5 +103,11 @@ Note: every time you run the command with same page url, it will load different 
 python font_decrypt.py -test_maoyan "https://maoyan.com/films/1226583"
 ```
 
+# References
+**Machine Learning :: Cosine Similarity for Vector Space Models (Part III)**
+http://blog.christianperone.com/2013/09/machine-learning-cosine-similarity-for-vector-space-models-part-iii/
+**字体加密破解技术分享-01**
+https://zhuanlan.zhihu.com/p/108207403
+
 # Warning
 You can use the codes for free for personal purpose only, you will be responsible for any legal suit in commercial usage.
