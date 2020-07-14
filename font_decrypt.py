@@ -136,7 +136,7 @@ def getStreamMap(raw_font_stream):
             #else:
             std_pt_num = len(std_points)
             comp_pt_num = len(comp_points)
-            score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*10))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
+            score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*(0.25*std_pt_num)))/std_pt_num * max(1, abs(std_pt_num-comp_pt_num)) # important formula to score the similarity
             if _comp_curves(std_points, comp_points) or score < 10:
                 #if std_num == 3: print (comp_uni, score, abs(len(comp_points)-len(std_points)))
                 curves_matches.append((comp_uni, score))
