@@ -74,7 +74,7 @@ But if the font is variable to be loaded dyanmically, in other words, the charac
 you will have to manually look on the glyph contours to finialize the new mapping, 
 The codes has ability to make a AI training to find the new mapping automatically by comparing an existing mapping as we finalized.
 
-## AI Training for comparing the similarity between glyphs
+## AI Training for comparing the similarity between two glyphs
 The key point is to find a method scoring the similary of the glyph aganist to existing mapping.
 See below code line:
 ```
@@ -82,9 +82,9 @@ score = getVar(pt_divs) * (std_pt_num-min(std_pt_num,same_pt_cnt*10))/std_pt_num
 ```
 There are three key factors affecting the similarity detection:
 
-1. The variance based on all contour points comparison - getVar(pt_divs) , pt_divs is the list of ratio between the featurizes of tow points, lowest variance means higher similarity.
-2. Number of same points - same_pt_cnt , more same points means higher similarity.
-3. The difference of how many points between two glyphs, lower similarity is on higher difference.
+1. The variance based on all contour points comparison ```getVar(pt_divs)``` , **pt_divs** is the list of ratio between the featurizes of tow points, lowest variance means higher similarity.
+2. Number of same points **same_pt_cnt** , more same points means higher similarity.
+3. The difference of how many points between two glyphs (```abs(std_pt_num-comp_pt_num```), lower similarity is on higher difference.
 
   - ### Accuracy & Sample training
   Since the digits(0-9) have no complex contours, so there is only one existing font sample(i.e, the font file .woff in Repo.) for AI training for comparing the similarity, you might join more than one font samples for AI training for increase the accuracy.
