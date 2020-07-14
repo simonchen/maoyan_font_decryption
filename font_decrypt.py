@@ -30,7 +30,6 @@ except NameError:  # We are the main py2exe script, not a module
 cur_dir = os.path.dirname(os.path.abspath(cur_filepath))
 _standard_font_file = r"%s\8e0fa582edd4bbe2bfbe60ba6ee48c9e2276.woff" %cur_dir # standard font
 #print _standard_font_file
-_compare_font_file = r"C:\Users\Chen\Downloads\0a56a723d694fa7d1caf5001dbc95c5f2288.woff" # for comparison
 _standard_cmap = {
     'F3A8': 0,
     'F4A8': 1,
