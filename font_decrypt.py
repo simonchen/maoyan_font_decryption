@@ -127,8 +127,13 @@ def getStreamMap(raw_font_stream):
             same_pt_cnt = 0
             for i, pt in enumerate(std_pt):
                 if i > (len(comp_pt)-1): break
-                pt_divs.append(pt / comp_pt[i])
-                if (pt == comp_pt[i]): same_pt_cnt += 1
+                # find the closest point the make division
+                try:
+                    comp_pt.sort(lambda p1, p2: 1 if abs(p1-pt) > abs(p2-pt) else -1)
+                except:
+                    comp_pt.sort(key=lambda k: abs(k-pt), reverse=False)
+                pt_divs.append(pt / comp_pt[0])
+                if (pt == comp_pt[0]): same_pt_cnt += 1
             ##if std_num == 9:
             ##    print comp_uni, getVar(pt_divs), abs(len(comp_points)-len(std_points)), same_pt_cnt
             #if std_num == 3:
