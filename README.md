@@ -3,6 +3,7 @@ The python module could be extended for any site who uses same **Font Encryption
 
 Recently, the font encryption technique is widely used for many Chinese sites for prevent data scraping, those senstive data such as the digits(0~9) are encoded
 using a special method - Font encryption, below is an typical example on maoyan.com (a popular movie site in Chinese)
+
 ![Maoyan.com - Font encryption](maoyan_font_screenshot.png)
 
 Obviously, the numbers from HTML Source is encoded as HTML entities (unicode text), even you decode the HTML entities as unicode text, it's still messing chars that's not the actual numbers as you desired.
